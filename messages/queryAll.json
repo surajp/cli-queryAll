@@ -4,6 +4,7 @@
   "resultFormatDescription": "Result format. Either 'csv' or 'json'. Defaults to 'json'",
   "errorNoOrgResults": "No results found for the org '%s'.",
   "examples": [
-    "sfdx query:all -q 'Select Name from Account where IsDeleted=true'"
+    "sfdx query:all -q 'Select Name from Account where IsDeleted=true'",
+    "sfdx query:all -q 'Select Subject from Task where IsArchived=true' -r csv -u myOrg"
   ]
 }
