@@ -65,7 +65,7 @@ export default class Org extends SfdxCommand {
       let records = result.records.map((r) =>
         Object.fromEntries(Object.entries(flatten(r)).filter((e) => !e[1] || e[0].indexOf('attributes')==-1))
       );
-      const opts = {};
+      const opts = {includeEmptyRows: true};
       const transformOpts = {};
       const asyncOpts = {};
       const parser = new AsyncParser(opts, transformOpts, asyncOpts);
